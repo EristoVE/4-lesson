@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 2
+        </title>
+    </head>
+        <body>
+            <script>   
+                "use strict";
+
+                // Используя арифметические операции (+, -, *, /, %) для чисел, вычислить сумму
+                // и произведение цифр введенного пользователем четырехзначного числа.
+
+                let a = prompt("Введите четырёхзначное число", "1234");
+
+                let digit1 = a / 10;
+                let digit2 = a % 10;
+                let digit3 = Math.floor(a / 10);
+                let digit4 = digit3 % 10;
+                let digit5 = Math.floor(digit3 / 10);
+                let digit6 = digit5 % 10;
+                let digit7 = Math.floor(digit5 / 10);
+                let digit8 = digit7 % 10;
+                let b = Math.abs(digit8 + digit6 + digit4 + digit2);
+                let c = parseInt(digit8 - digit6 - digit4 - digit2);
+                let d = digit8 * digit6 * digit4 * digit2;
+                let e = digit8 / digit6 / digit4 / digit2;
+                let f = digit8 % digit6 % digit4 % digit2;
+
+                console.log("Сложение", b); 
+                console.log("Вычитание", c);
+                console.log("Умножение", d);
+                console.log("Деление", e);
+                console.log("Остаток от деления", f);
+            </script>
+        </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 4
+        </title>
+    </head>
+        <body>
+            <script> 
+                "use strict";
+
+                // В квадратной комнате шириной w и высотой потолка h есть дверь и 
+                // несколько одинаковых окон. Вычислить площадь стен для оклеивания их обоями. 
+                // Размеры комнаты (w и h), размеры двери и окна, а также количество окон 
+                // вводятся пользователем.
+
+                let h = prompt("Введите высоту потолка в метрах", "2.7");
+                let w = prompt("Введите ширину комнаты в метрах", "5"); 
+                let h1 = prompt("Введите высоту окна в метрах", "1.42");
+                let w1 = prompt("Введите ширину окна в метрах", "1.47");
+                let h2 = prompt("Введите высоту двери в метрах", "2");
+                let w2 = prompt("Введите ширину двери в метрах", "0.8");
+                let wind = prompt("Введите количество окон", "1");
+                let p;           // Периметр комнаты
+                let s;          // Площадь стен
+                let sw;        // Площадь окна
+                let sd;       // Плащадь двери
+
+                h = Number(h);
+                w = Number(w);
+                h1 = Number(h1);
+                w1 = Number(w1);
+                h2 = Number(h2);
+                w2 = Number(w2);
+                wind = Number(wind);
+
+                //console.log(typeof h, "h");
+                //console.log(typeof w, "w");
+                //console.log(typeof h1, "h1");       // Оставил для проверки.
+                //console.log(typeof w1, "w1");
+                //console.log(typeof h2, "h2");
+                //console.log(typeof w2, "w2");
+                //console.log(typeof wind, "wind");
+
+                p = (w + w)*2;
+                sw = h1*w1;
+                sd = h2*w2;
+                s = p*h - (sw*wind + sd);
+
+                console.log("Необходимо обоев м2", s.toFixed(2));
+                
+            </script>
+        </body>
+</html>
